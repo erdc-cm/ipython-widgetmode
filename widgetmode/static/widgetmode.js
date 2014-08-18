@@ -5,9 +5,10 @@ if (!window.widget_mode) {
         $('#notebook-container').width('100%');
         $('.cell:not(.code_cell)').hide();
         $('.output, .prompt').hide();
-	$('.input:not(.widget-numeric-text):not(.widget-text)').hide()
+        $('.input:not(.widget-numeric-text):not(.widget-text)').hide();
         $('#notebook div.cell.selected').css('border', 'none');
         $('#notebook').css('padding', '0px');
+        $('.div, .end_space').css('height', '0px');
 
         $('#menubar-container').on('mouseleave', hide_menu );
         $('#menubar-container').on('mouseenter', show_menu );
@@ -31,6 +32,7 @@ if (!window.widget_mode) {
         $('.output, .input, .prompt').show();
         $('#notebook div.cell.selected').css('border', '');
         $('#notebook').css('padding', '');
+        $('.div, .end_space').css('height', '');
 
         $('#menubar-container').off('mouseleave', hide_menu );
         $('#menubar-container').off('mouseenter', show_menu );
